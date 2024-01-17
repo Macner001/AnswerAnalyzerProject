@@ -1,0 +1,51 @@
+/* Add this CSS code for styling */
+
+body {
+    background-color: black;
+    color: darkgray;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #00ffcc; /* A teal color for the header */
+}
+
+form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #00ffcc; /* A teal border for the form */
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+   background-color:darkgray;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #00ffcc; /* A teal color for the button */
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008080; /* Darker teal color on hover */
+}
+
+hr {
+    border: 1px solid #00ffcc; /* A teal color for the horizontal line */
+}
+
+/* Add more styles as needed */
