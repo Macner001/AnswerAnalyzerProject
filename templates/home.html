@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome To Answer Anlyzer</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:black
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button.animated-button {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, background-color 0.3s;
+    margin-bottom: 20px; /* Adds space between buttons */
+}
+
+button.animated-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    border: 2px solid #4caf50;
+    box-sizing: border-box;
+    animation: rotateBorder 2s linear infinite;
+}
+
+
+
+button.animated-button:hover {
+    color: #000;
+    background-color: #45a049;
+}
+
+#logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Adjust background color if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure the logo is on top */
+}
+
+#logo {
+    max-width: 100%;
+    max-height: 100%;
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var logoContainer = document.getElementById("logo-container");
+
+    // Show the logo
+    logoContainer.style.display = "flex";
+
+    // Hide the logo after 4 seconds (4000 milliseconds)
+    setTimeout(function () {
+        logoContainer.style.display = "none";
+    }, 4000);
+});
+</script>
+<body>
+ <div id="logo-container">
+        <img id="logo" src="logo/logo.png" alt="Logo">
+    </div>
+    <h1>Welcome ! 🤖</h1>
+    <form method="get" action="/Admin-Login">
+        <button class="animated-button" type="submit">Admin</button>
+    </form>
+    <form method="get" action="/Student-login">
+        <button class="animated-button" type="submit">Student</button>
+    </form>
+
+    <script>
+        // Check if SpeechSynthesis is supported
+        if ('speechSynthesis' in window) {
+            // Boolean variable to track if speech has been initiated
+            let hasSpeechInitiated = false;
+
+            // Function to speak the text
+            function speak(text) {
+                const message = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(message);
+            }
+
+            // Speak a greeting only the first time the page loads
+            if (!hasSpeechInitiated) {
+                speak('Hello Good Morning');
+                hasSpeechInitiated = true; // Update the flag
+            }
+        } else {
+            console.log('Speech synthesis not supported');
+        }
+
+    </script>
+</body>
+</html>

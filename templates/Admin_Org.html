@@ -1,0 +1,38 @@
+<!-- templates/Admin_Org.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Organizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Admin_org.css') }}">
+</head>
+<body>
+    <h1>Test Organizer</h1>
+
+    <form method="post" action="{{ url_for('add_entry') }}">
+
+
+        <!-- Repeat the following block for each question -->
+
+            <label>Enter the Question:</label>
+            <input type="text" name="tag" required>
+
+            <label>Enter Some references:</label>
+            <input type="text" name="reference" required>
+
+            <!-- Allow the user to add more references dynamically -->
+            <label>Add more references (type 'N' to stop):</label>
+            <input type="text" name="more_references">
+
+            <label>Value of Question:</label>
+            <input type="number" name="marks" required>
+
+            <hr> <!-- Separate each question with a horizontal line -->
+
+        <button type="submit">Submit</button>
+        <button><a href="{{url_for('Admin')}}">Back</a></button>
+    </form>
+
+</body>
+</html>

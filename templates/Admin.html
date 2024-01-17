@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Admin.css') }}">
+    <script>
+        alert("{{ alert }}");
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="{{ url_for('Admin') }}" class="form-container">
+            <div class="left-panel">
+                <label>Organize the test papers.</label>
+            </div>
+            <div class="right-panel">
+                <button class="test" type="submit" name="test_button">Test</button>
+                <button class="test" type="submit" name="model_button">Submit to Model</button>
+                <button class="check" type="submit" name="check">Check</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
