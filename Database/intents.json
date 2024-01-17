@@ -1,0 +1,32 @@
+{
+    "intents": [
+        {
+            "tag": "What is OOP?",
+            "patterns": [
+                "As the name suggests, Object-Oriented Programming or OOPs refers to languages that use objects in programming. Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function."
+            ],
+            "marks": 2
+        },
+        {
+            "tag": "What is SQL?",
+            "patterns": [
+                "SQL stands for Structured Query Language and is a computer language that we use to interact with a relational database. SQL is a tool for organizing, managing, and retrieving archived data from a computer database."
+            ],
+            "marks": 2
+        },
+        {
+            "tag": "What is python?",
+            "patterns": [
+                "Python is ahigh-level, general-purpose, and interpreted programming language used in various sectors including machine learning, artificial intelligence, data analysis, web development, and many more."
+            ],
+            "marks": 2
+        },
+        {
+            "tag": "What is python?",
+            "patterns": [
+                "Python is ahigh-level, general-purpose, and interpreted programming language used in various sectors including machine learning, artificial intelligence, data analysis, web development, and many more."
+            ],
+            "marks": 2
+        }
+    ]
+}
